@@ -1,0 +1,121 @@
+.sign {
+    width: 100%;
+    display: flex;
+    background: white;
+    /* border:1px solid gray;
+    border-radius:20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:20px;
+}
+.signinsection h2{
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.signinsection h3{
+    font-size: 23px;
+    color: #777;
+    font-weight: 600;
+    padding-bottom:0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sign_in{
+    padding-top:20px;
+    width: 450px;
+    text-align:left;
+}
+
+.sign_in h4{
+    margin-left:10px;
+    font-size:20px;
+} 
+
+.sign_in input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.sign_in .submit {
+    margin-top: 60px;
+    margin-bottom:60px;
+    width: 450px;
+}
+
+
+.sign form{
+    width:100%;
+}
+
+.sign form .form-group{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.sign_up{
+    padding-top:20px;
+    width: 600px;
+    text-align:left;
+}
+
+
+.sign_up label{
+    font-size: 20px;
+    color: #303030;
+    font-weight: 600;
+    padding: 15px 5px 0px 0px;
+} 
+
+.sign_up .col-sm-10{
+    padding:0 0 0 20px;
+}
+
+.sign_up input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+  
+.submit {
+    margin-top: 60px;
+    margin-bottom:60px;
+    width: 600px;
+}
+
+.submit input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    border:1.5px solid #FA8072;
+    color: #FA8072;
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.submit input:hover{
+    color:white;
+    background-color:#FA8072;
+}

@@ -15,26 +15,31 @@
   <link  rel="stylesheet" href="../css/Main.css" >
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
-  <!-- nav div -->
-  <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:80px;">
+   <!-- nav div -->
+   <nav class="navbar navbar-expnad-xl navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <a class="navbar-grand navbar-left" href="Home.html">
+            <img class="navimg" src="../img/logo.png" alt="Logo" width="100"></img>
+        </a>
+        <button type="button" class="navbar-toggle active" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img src="../img/logo.png" width=40%></img>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
-          <li><a href="Home.html">Color <br> Palette<br></a></li>
-          <li><a href="Test.html">Personal Color<br>TEST</a></li>
-          <li><a href="Spring.html">Personal color<br>CHARACTERISTICS</a></li>
-          <li><a href="Match.html">Personal color<br>MATCHING</a></li>
-        </ul>
-      </div>
+        <div id="myNavbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left" style="text-align:center; font-weight:bold; margin-left:10px;">
+                <li class="nav-item"><a class="nav-link" href="Test.html">test</a></li>
+                <li class="nav-item"><a class="nav-link" href="Spring.html">characteristice</a></li>
+                <li class="nav-item"><a class="nav-link" href="Match.html">mathcing</a></li>
+                <li class="nav-item"><a class="nav-link" href="">reservation</a></li>
+              </ul>
+              <!-- 추후 로그인 완료 시 MyPage, Logout 으로 바꿀예정 -->
+              <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+                <li class="nav-item"><a class="nav-link" href="SignIn.html">Sign in</a></li>
+                <li class="nav-item"><a class="nav-link" href="SignUp.html">Sign up</a></li>
+              </ul>
+        </div>
     </div>
   </nav>
 
@@ -117,8 +122,8 @@
     </div>
   </div>
 
-  <!--footer-->
-  <footer class="container-fluid text-center" id="footer">
+   <!--footer-->
+   <footer class="container-fluid text-center" id="footer">
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
@@ -127,17 +132,15 @@
       <div class="col-md-9" style="text-align:left;">
         <h4>About us</h4>
         <label><b>Team leader :</b> Cheon Eun-jung</label><br>
-        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Lee Bo-Hyeon</label><br>
         <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
 
       </div>
       <div class="col-md-3" style="text-align:left;">
         <h4>Contact us</h4>
-        <label><b>Tel :</b> 010-8620-5458</label><br>
-        <label><b>Email :</b> jijking1209@naver.com</label>
+        <label><b>Tel :</b> 010-1234-5678</label><br>
+        <label><b>Email :</b> a12345@naver.com</label>
       </div>
-
     </footer>
-
   </body>
   </html>

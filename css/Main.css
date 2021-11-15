@@ -41,17 +41,11 @@ label{
   font-weight: normal;
 }
 
-nav .container-fluid{
-  margin-top: 10px;
-}
-
 .container-fluid {
   padding:0;
   text-align: center;
 }
 
-.container{
-}
 
 .content{
   width:70%;
@@ -71,10 +65,11 @@ nav .container-fluid{
   padding:0 3rem 3rem 3rem;
 }
 
+/* navbar css */
 .navbar {
   width:100%;
-  margin:0;
   border: 0;
+  margin: 0;
   background-color:#FA8072;
   color:#ffffff;
   z-index: 9999;
@@ -86,13 +81,18 @@ nav .container-fluid{
   text-transform: uppercase;
 }
 
-.navbar li a{
-  color: #ffffff !important;
+.navbar .container-fluid{
+  text-align:left;
+  margin-top: 5px;
+  margin-bottom:5px;
 }
 
 .navbar-nav{
-  margin-top:5px;
-  padding-left: 20px;
+  margin-top:7px;
+}
+
+.navbar li a{
+  color: #ffffff !important;
 }
 
 .navbar-nav li a:hover,
@@ -101,13 +101,31 @@ nav .container-fluid{
   color: red !important;
 }
 
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
+.navbar .container-fluid{
+  padding-right:30px;
+  padding-left:30px;
 }
 
-#myNavbar{
-  padding-right: 20px;
+.navbar-toggle{
+  border:#ffffff;
+  margin: 10px 0px 10px 0px;
+}
+
+.navbar-toggle .icon-bar{
+  width:30px !important;
+  height:4px !important;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #FA8072;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #ffffff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #FA8072;
 }
 
 
