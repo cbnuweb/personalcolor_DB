@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>P-Color MainPage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <link  rel="stylesheet" href="../css/Test.css" >
+  <script type="text/javascript" src="../javascript/Test.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
+  <!-- nav div -->
+  <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../img/logo.png" width=40%></img>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+          <li><a href="Home.html">Color <br> Palette<br></a></li>
+          <li><a href="Test.html">Personal Color<br>TEST</a></li>
+          <li><a href="Spring.html">Personal color<br>CHARACTERISTICS</a></li>
+          <li><a href="Match.html">Personal color<br>MATCHING</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content div -->
+  <div class="container-fluid">
+    <div class="content">
+      <!-- uploadsection -->
+      <section class="page_section testinsection">
+        <!-- uploadsection title -->
+        <div class="section_title">
+          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
+          <h3 class="section-subheading text-muted">Find your personal color type</h3>
+        </div>
+        <!-- uploadsection content -->
+
+        <div class="testinsection_image" id="testinsection_img">
+          <img class="arrow" src="../img/left.png" id="left" alt="left" onclick="changebg(this,2);"></img>
+          <div class="circle">
+            <img class="upload" src="../img/example.png" id="img_section"></img>
+          </div>
+          <img class="arrow" src="../img/right.png" id="right" alt="right" onclick="changebg(this,2);"></img>
+        </div>
+
+        <div id="testinsection_file">
+          <label for="upload_file">File Upload</label>
+          <input type="file" class="upload-hidden" id="upload_file" accept="image/*" required = true>
+        </div>
+
+        <script>
+        const reader = new FileReader();
+        reader.onload = (readerEvent) => {
+          document.querySelector("#img_section").setAttribute("src", readerEvent.target.result);
+        };
+        document.querySelector("#upload_file").addEventListener("change", (changeEvent) => {
+          const imgFile = changeEvent.target.files[0];
+          reader.readAsDataURL(imgFile);
+        })
+        </script>
+
+        <h3>Choose the background where your face looks the brightest!</h3>
+        <div style="padding:15px;">
+          <button class="testinsection_btn" type="button" name="button" onclick="select_image()">Select!</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer class="container-fluid text-center" id="footer">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br>
+    <div class="row">
+      <div class="col-md-9" style="text-align:left;">
+        <h4>About us</h4>
+        <label><b>Team leader :</b> Cheon Eun-jung</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
+        <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
+
+      </div>
+      <div class="col-md-3" style="text-align:left;">
+        <h4>Contact us</h4>
+        <label><b>Tel :</b> 010-8620-5458</label><br>
+        <label><b>Email :</b> jijking1209@naver.com</label>
+      </div>
+    </footer>
+
+  </body>
+  </html>

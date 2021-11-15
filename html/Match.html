@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>P-Color MatchingPage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <link  rel="stylesheet" href="../css/Match.css" >
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <script type="text/javascript" src="../javascript/Match.js"></script>
+
+  <script>
+  navigator.mediaDevices.getUserMedia({
+    video:{
+      width: 180,
+    }
+  }).then(stream=>{
+    document.getElementById("vid").srcObject = stream;
+  })
+  </script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px";>
+  <!-- nav div -->
+  <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../img/logo.png" width=40%></img>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+          <li><a href="Home.html">Color <br> Palette<br></a></li>
+          <li><a href="Test.html">Personal Color<br>TEST</a></li>
+          <li><a href="Spring.html">Personal color<br>CHARACTERISTICS</a></li>
+          <li><a href="Match.html">Personal color<br>MATCHING</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content div-->
+  <div class="container-fluid">
+    <div class="content">
+      <!-- section1 -->
+      <section class="page_section" id="section1">
+        <div class="section_title">
+          <h2 class="section-heading text-uppercase">Personal Color Matching</h2>
+          <h3 class="section-subheading text-muted">Match color by personal color type</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="section1_camera">
+              <div class="circle">
+                <video id="vid" style="width: 200px; height: 200px; object-fit: cover;" autoplay></video>
+              </div>
+            </div>
+            <div id="section1_cloth" style="background-color:black;">
+              <img src="../img/cloth.png" alt="cloth" class="img-responsive" >
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <p id="palette_p">Color Palette</p>
+            <div class="section1_btn">
+              <button type="button" name="button" id="spr" onclick="select(this);">SPRING</button>
+              <button type="button" name="button" id="sum" onclick="select(this);">SUMMER</button>
+              <button type="button" name="button" id="aut" onclick="select(this);">FALL</button>
+              <button type="button" name="button" id="win" onclick="select(this);">WINTER</button>
+            </div>
+            <div class="section6_palette">
+              <table class="palette_table">
+                <tr>
+                  <td data-name="001" id="1" bgcolor="#D82D19" onclick="changecloth(this)">&nbsp</td>
+                  <td data-name="002" id="2" bgcolor="#E88452" onclick="changecloth(this)">&nbsp</td>
+                </tr>
+                <tr>
+                  <td data-name="003" id="3" bgcolor="#FBB1B1" onclick="changecloth(this)">&nbsp</td>
+                  <td data-name="004" id="4" bgcolor="#EEF3B1" onclick="changecloth(this)">&nbsp</td>
+                </tr>
+                <tr>
+                  <td data-name="005" id="5" bgcolor="#94DA9B" onclick="changecloth(this)">&nbsp</td>
+                  <td data-name="006" id="6" bgcolor="#BAEBD7" onclick="changecloth(this)">&nbsp</td>
+                </tr>
+                <tr>
+                  <td data-name="007" id="7" bgcolor="#64BDCD" onclick="changecloth(this)">&nbsp</td>
+                  <td data-name="008" id="8" bgcolor="#2E6A9C" onclick="changecloth(this)">&nbsp</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer class="container-fluid text-center" id="footer">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br>
+    <div class="row">
+      <div class="col-md-9" style="text-align:left;">
+        <h4>About us</h4>
+        <label><b>Team leader :</b> Cheon Eun-jung</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
+        <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
+
+      </div>
+      <div class="col-md-3" style="text-align:left;">
+        <h4>Contact us</h4>
+        <label><b>Tel :</b> 010-8620-5458</label><br>
+        <label><b>Email :</b> jijking1209@naver.com</label>
+      </div>
+
+    </footer>
+
+  </body>
+  </html>

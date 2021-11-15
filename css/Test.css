@@ -1,0 +1,148 @@
+.col-md-4{
+  cursor:pointer;
+}
+
+#testsection{
+  text-align:center;
+  word-break:break-all;
+}
+
+.testsection_image{
+  width:60%;
+  background-size:contain;
+  text-align:center
+}
+
+.testsection_p{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color:black;
+}
+
+.cam{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.circle{
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 300px;
+  height: 300px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.testinsection{
+   width:70vw;
+   text-align:center;
+   word-break:break-all;
+}
+
+.testinsection_image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  text-align: center;
+  position:relative;
+  vertical-align:middle;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-image: url('../img/t1.png');
+}
+
+.testinsection_btn{
+  text-align:center;
+  width:25%;
+  height:50px;
+  border:1px solid white;
+  color:white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color:#ffb6b9;
+}
+
+.arrow{
+  width:50px;
+  display:inline;
+  align-items: center;
+  cursor:pointer;
+}
+
+.upload{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+#testinsection_file{
+  padding-top:15px;
+  padding-bottom:30px;
+}
+
+#testinsection_file label{
+  display:inline;
+  line-height:normal;
+  vertical-align:middle;
+  cursor:pointer;
+  padding:10px 20px 10px 20px;
+  background-color:#eeeeee;
+  color:black;
+  font-size:15px;
+  font-weight:bold;
+  border:1px solid #393e46;
+  border-radius:5px;
+}
+
+#testinsection_file input[type="file"]{
+  display:none;
+}
+
+.testinsection_questdiv{
+  padding-top:100px;
+  background-image:url('../img/memo.png');
+  background-repeat:no-repeat;
+  background-position:center center;
+  width:inherit;
+  height:500px;
+  background-size:contain;
+
+}
+
+.testinsection_questdiv h1{
+  margin:0px;
+  padding-bottom:30px;
+  color:black;
+  font-weight:bold;
+}
+
+.testinsection_question{
+  padding-top:20px;
+  width:60%;
+  margin:0 auto;
+}
+
+.testinsection_question button{
+  text-align:center;
+  width:70%;
+  height:100px;
+  border:2px solid white;
+  color:#f6f6f6;
+  border-radius: 5px;
+  background-color:#fbc687;
+  font-size:20px;
+  font-weight: bold;
+}
+
+.testinsection_question button:hover{
+  background-color: #ea907a;
+}
