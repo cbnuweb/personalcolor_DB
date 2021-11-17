@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>P-Color MainPage</title>
+
+  <title>P-Color Reservation Select Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -12,17 +13,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <link  rel="stylesheet" href="../css/Main.css" >
-  <link  rel="stylesheet" href="../css/Test.css" >
-  <script type="text/javascript" src="../javascript/Test.js"></script>
+  <link rel="stylesheet" href="../css/Store.css">
+  <script type="text/javascript" src="../javascript/Store.js"></script>
 
-  <script type="text/javascript">
-    navigator.mediaDevices.getUserMedia({
-      video:{
-        width: 180,
-      }
-    }).then(stream =>{
-      document.getElementById("vid").srcObject = stream;
-    })
   </script>
 </head>
 
@@ -57,31 +50,74 @@
   <!-- content div -->
   <div class="container-fluid">
     <div class="content">
-      <!-- camsection -->
-      <section class="page_section testinsection">
-        <!-- camsection title -->
+      <!-- testsection -->
+      <section class="page_section" id="selectsection">
+
+        <!-- testsection title -
         <div class="section_title">
-          <h2>Personal Color Test</h2>
-          <h3 class="text-muted">Find your personal color type</h3>
-        </div>
-        <!-- camsection content -->
-        <div class="testinsection_image" id="testinsection_cam">
-          <img class="arrow" src="../img/left.png" id="left" alt="left" onclick="changebg(this,1);"></img>
-          <div class="circle">
-            <video class="cam" id="vid" autoplay></video>
+          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
+          <h3 class="section-subheading text-muted">Find your personal color type</h3>
+        </div>-->
+
+        <!-- testsection content -->
+        <div class="row">
+          <div class="col-md-4" id="store1" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="../img/photograph.png" alt="cam" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id="store1_p">Store 1</p>
+            </div>
           </div>
-          <img class="arrow" src="../img/right.png" id="right" alt="right" onclick="changebg(this,1);"></img>
+          <div class="col-md-4" id="store2" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="../img/picture.png" alt="picture" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id="store2_p">Store 2</p>
+            </div>
+          </div>
+          <div class="col-md-4" id="store3" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="../img/survey.png" alt="survey" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id="store3_p">Store 3</p>
+            </div>
+          </div>
         </div>
-        <h3>Choose the background where your face looks the brightest!</h3>
-        <div style="padding:15px;">
-          <button class="testinsection_btn" type="button" name="button" onclick="select_image();">Select!</button>
+        <div class="row">
+          <div class="col-md-4" id="store4" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="../img/photograph.png" alt="cam" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id="store4_p">Store 4</p>
+            </div>
+          </div>
+          <div class="col-md-4" id="" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="" alt="" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id=""></p>
+            </div>
+          </div>
+          <div class="col-md-4" id="" onclick="location.href='Reservation.html'" onmouseover="over(this);" onmouseout="out(this);">
+            <div>
+              <img src="" alt="" class="selectsection_image img-resonsive">
+            </div>
+            <div class="selectsection_p">
+              <p id=""></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 
-   <!--footer-->
-   <footer class="container-fluid text-center" id="footer">
+  <!--footer-->
+  <footer class="container-fluid text-center" id="footer">
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
@@ -90,14 +126,14 @@
       <div class="col-md-9" style="text-align:left;">
         <h4>About us</h4>
         <label><b>Team leader :</b> Cheon Eun-jung</label><br>
-        <label><b>Team Member :</b> Jeon Seung-won, Lee Bo-Hyeon</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
         <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
 
       </div>
       <div class="col-md-3" style="text-align:left;">
         <h4>Contact us</h4>
-        <label><b>Tel :</b> 010-1234-5678</label><br>
-        <label><b>Email :</b> a12345@naver.com</label>
+        <label><b>Tel :</b> 010-8620-5458</label><br>
+        <label><b>Email :</b> jijking1209@naver.com</label>
       </div>
     </footer>
 
