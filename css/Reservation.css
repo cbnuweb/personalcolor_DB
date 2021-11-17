@@ -1,0 +1,152 @@
+.testsection_image{
+  width:60%;
+  background-size:contain;
+  text-align:center
+}
+
+.home{
+  text-align:center;
+  width:48%;
+  height:35px;
+  border:1px solid white;
+  color:white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color:#FFB900;
+}
+
+.review{
+  text-align:center;
+  width:48%;
+  height:35px;
+  border:1px solid white;
+  color:white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color:#FFB900;
+}
+
+.storeInfo{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
+}
+.storeInfo2{
+  font-size: 15px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.nativeDatePicker{
+  text-align: left;
+}
+
+.res_btn{
+  margin-top: 20px;
+    text-align:center;
+    width:100%;
+    height:35px;
+    border:1px solid white;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color:#FFB900;
+}
+
+#res_time{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#res_hr{
+  background-color: #FFB900;
+  height: 3px;
+  border-radius: 5px;
+}
+
+#selectDate{
+  margin-right: 200px;
+  padding-left: 30px;
+}
+
+
+/* show2 */
+
+/* 별점 */
+.star-rating {
+  padding-top: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 25px;
+  text-align: center;
+  width: 5em;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
+}
+
+/* 리뷰입력창 */
+#new-comment{
+  width: 75%;
+  height : 38px;
+  border-radius: 10px;
+  margin-right: 5px;
+  padding: 0px 10px;
+  border: 2px solid lightgray;
+  font-size: 14px;
+}
+
+#submitBtn{
+  width: 20%;
+  height : 38px;
+  border-radius: 10px;
+  border:2px solid #FA8072;
+  color: #FA8072;
+  background-color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#submitBtn:hover{
+    color:white;
+    background-color:#FA8072;
+}
+
+.comment-Input{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.comment-row{
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+.comment-content{
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+}

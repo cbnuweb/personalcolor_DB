@@ -1,0 +1,30 @@
+.col-md-4{
+  cursor:pointer;
+}
+
+#selectsection{
+  text-align:center;
+  word-break:break-all;
+}
+
+.selectsection_image{
+  width:60%;
+  background-size:contain;
+  text-align:center
+}
+
+.selectsection_p{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color:black;
+}
+
+.store1{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
