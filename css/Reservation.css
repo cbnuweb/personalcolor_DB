@@ -1,4 +1,21 @@
+.testsection_image{
+  width:60%;
+  background-size:contain;
+  text-align:center
+}
+
 .home{
+  text-align:center;
+  width:48%;
+  height:35px;
+  border:1px solid white;
+  color:white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color:#FFB900;
+}
+
+.review{
   text-align:center;
   width:48%;
   height:35px;
@@ -19,23 +36,6 @@
   font-size: 15px;
   text-align: left;
   margin-left: 30px;
-}
-
-.review{
-  text-align:center;
-  width:48%;
-  height:35px;
-  border:1px solid white;
-  color:white;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color:#FFB900;
-}
-
-.testsection_image{
-  width:60%;
-  background-size:contain;
-  text-align:center
 }
 
 .nativeDatePicker{
@@ -74,13 +74,14 @@
 
 
 /* show2 */
+
+/* 별점 */
 .star-rating {
+  padding-top: 10px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  justify-content: space-around;
-  padding: 0 0.2em;
+  font-size: 25px;
   text-align: center;
   width: 5em;
 }
@@ -105,6 +106,47 @@
   -webkit-text-fill-color: #fff58c;
 }
 
+/* 리뷰입력창 */
+#new-comment{
+  width: 75%;
+  height : 38px;
+  border-radius: 10px;
+  margin-right: 5px;
+  padding: 0px 10px;
+  border: 2px solid lightgray;
+  font-size: 14px;
+}
+
+#submitBtn{
+  width: 20%;
+  height : 38px;
+  border-radius: 10px;
+  border:2px solid #FA8072;
+  color: #FA8072;
+  background-color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#submitBtn:hover{
+    color:white;
+    background-color:#FA8072;
+}
+
+.comment-Input{
+  margin-top:20px;
+  margin-bottom:20px;
+}
 .comment-row{
   text-align: left;
+  border-bottom: 1px solid lightgray;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+.comment-content{
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
 }
