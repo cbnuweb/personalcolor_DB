@@ -1,0 +1,154 @@
+.section_title{
+    padding:0px;
+}
+
+.Mypage_image{
+    height:200px;
+    line-height: 200px;
+    margin-bottom:30px;
+  }
+
+.Mypage_image img{
+    width:200px;
+    height:200px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.Mypage_Info form{
+    width:100%;
+}
+
+.Mypage_Info form .form-group{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.Mypage_Info label{
+    font-size: 18px;
+    color: #303030;
+    font-weight: 600;
+    padding: 15px 5px 0px 0px;
+} 
+
+.Mypage_Info .col-sm-8{
+    padding:0 0 0 20px;
+}
+
+.Mypage_Info input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+  
+.submit {
+    margin-top: 30px;
+    margin-bottom:30px;
+    margin-left:5px;
+    width: 95%;
+}
+
+.submit input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-radius: 20px;
+    border:1.5px solid #FA8072;
+    color: #FA8072;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.submit input:hover{
+    color:white;
+    background-color:#FA8072;
+}
+
+.change input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 15px;
+    border:2px solid #7F7C82;
+    color: #7F7C82;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding:3px;
+}
+
+.change input:hover{
+    color:white;
+    background-color:#7F7C82;
+}
+
+.Reservation_Info{
+    text-align:left;
+    margin-bottom:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.Reservation_Info .col-sm-10{
+    padding:0px;
+}
+
+.Reservation_Info .col-sm-2{
+    padding:0px;
+}
+
+.Reservation_Date{
+    display:inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right:10px;
+    color:black;
+}
+
+.Reservation_Time{
+    display:inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color:black;
+}
+
+.Reservation_Name{
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+}
+.Reservation_Delete{
+    display:inline-block;
+}
+
+.Reservation_Delete input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 15px;
+    border:2px solid #FA8072;
+    color: #FA8072;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding:3px;
+}
+
+.Reservation_Delete input:hover{
+    color:white;
+    background-color:#FA8072;
+}
+
+#res_hr{
+    background-color: #7F7C82;
+    height: 2px;
+    border-radius: 5px;
+    margin-bottom:40px;
+  }
