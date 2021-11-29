@@ -21,6 +21,7 @@ Based on the tendencies that people are interested in beauty.
 
 - Contact
 
+
 2. Test ( Cam, Image, Survey )
 
 - By Cam
@@ -34,7 +35,24 @@ Based on the tendencies that people are interested in beauty.
 
 - Features for each personal color
 
+
 4. Match
 
 - Matching personal colors through Cam
 
+
+5. SignIn/SignUp
+
+- User Sign In & Sign Up function
+
+
+6. Reservation
+
+- personal color offline store reservation
+
+- use review
+
+
+7. Mypage
+
+- manage user's info and reservation
