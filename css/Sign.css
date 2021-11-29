@@ -10,6 +10,8 @@
     flex-direction: column;
     padding-top:20px;
 }
+
+
 .signinsection h2{
     font-size: 26px;
     text-transform: uppercase;
@@ -32,8 +34,8 @@ a {
 
 .sign_in{
     padding-top:20px;
-    width: 450px;
-    text-align:left;
+    width: 500px;
+    text-align:center;
 }
 
 .sign_in h4{
