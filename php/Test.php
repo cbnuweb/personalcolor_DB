@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -22,30 +25,43 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:80px;">
   <!-- nav div -->
   <nav class="navbar navbar-expnad-xl navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-grand navbar-left" href="Home.html">
-            <img class="navimg" src="../img/logo.png" alt="Logo" width="100"></img>
-        </a>
-        <button type="button" class="navbar-toggle active" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div id="myNavbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left" style="text-align:center; font-weight:bold; margin-left:10px;">
-                <li class="nav-item"><a class="nav-link" href="Test.html">test</a></li>
-                <li class="nav-item"><a class="nav-link" href="Spring.html">characteristice</a></li>
-                <li class="nav-item"><a class="nav-link" href="Match.html">mathcing</a></li>
-                <li class="nav-item"><a class="nav-link" href="Store.html">reservation</a></li>
-              </ul>
-              <!-- 추후 로그인 완료 시 MyPage, Logout 으로 바꿀예정 -->
-              <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
-                <li class="nav-item"><a class="nav-link" href="SignIn.html">Sign in</a></li>
-                <li class="nav-item"><a class="nav-link" href="SignUp.html">Sign up</a></li>
-              </ul>
-        </div>
-    </div>
-  </nav>
+      <div class="container-fluid">
+          <a class="navbar-grand navbar-left" href="Home.php">
+              <img class="navimg" src="../img/logo.png" alt="Logo" width="100"></img>
+          </a>
+          <button type="button" class="navbar-toggle active" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="myNavbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-left" style="text-align:center; font-weight:bold; margin-left:10px;">
+                  <li class="nav-item"><a class="nav-link" href="Test.php">test</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Spring.php">characteristice</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Match.php">mathcing</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Store.php">reservation</a></li>
+                </ul>
+
+                <?php
+                if(isset($_SESSION['userid'])){
+                ?>
+                <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+                  <li class="nav-item"><a class="nav-link" href="Mypage.php">Mypage</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Logout.php">Logout</a></li>
+                </ul>
+                <?php
+                }else{
+                ?>
+                <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+                  <li class="nav-item"><a class="nav-link" href="SignIn.php">Sign in</a></li>
+                  <li class="nav-item"><a class="nav-link" href="SignUp.php">Sign up</a></li>
+                </ul>
+                <?php
+                }
+                ?>
+          </div>
+      </div>
+    </nav>
 
   <!-- content div -->
   <div class="container-fluid">
@@ -61,7 +77,7 @@
 
         <!-- testsection content -->
         <div class="row">
-          <div class="col-md-4" id="cam" onclick="location.href='Cam.html'" onmouseover="over(this);" onmouseout="out(this);">
+          <div class="col-md-4" id="cam" onclick="location.href='Cam.php'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
               <img src="../img/photograph.png" alt="cam" class="testsection_image img-resonsive">
             </div>
@@ -69,7 +85,7 @@
               <p id="cam_p">test by cam</p>
             </div>
           </div>
-          <div class="col-md-4" id="upload" onclick="location.href='Upload.html'" onmouseover="over(this);" onmouseout="out(this);">
+          <div class="col-md-4" id="upload" onclick="location.href='Upload.php'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
               <img src="../img/picture.png" alt="picture" class="testsection_image img-resonsive">
             </div>
@@ -77,7 +93,7 @@
               <p id="upload_p">test by picture</p>
             </div>
           </div>
-          <div class="col-md-4" id="survey" onclick="location.href='Survey.html'" onmouseover="over(this);" onmouseout="out(this);">
+          <div class="col-md-4" id="survey" onclick="location.href='Survey.php'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
               <img src="../img/survey.png" alt="survey" class="testsection_image img-resonsive">
             </div>

@@ -54,16 +54,16 @@ function select_image(){
   var imgnum=temp2.substring(0,1);
 
   if(imgnum==1){
-    location.href='Spring.html';
+    location.href='Spring.php';
   }
   else if(imgnum==2){
-    location.href='Summer.html';
+    location.href='Summer.php';
   }
   else if(imgnum==3){
-    location.href='Autumn.html';
+    location.href='Autumn.php';
   }
   else if(imgnum==4){
-    location.href='Winter.html';
+    location.href='Winter.php';
   }
 }
 
