@@ -6,20 +6,21 @@ $dbname = "personalcolor";
 mysqli_select_db($conn, $dbname) or die('DB selection failed');
 
 // Create table
-$sql =	"CREATE TABLE Store(
-	StoreNo VARCHAR(45) NOT NULL, 
-	StoreName VARCHAR(45) NOT NULL UNIQUE,
-	StoreAddress VARCHAR(45) NOT NULL UNIQUE,
-	StoreTime VARCHAR(45) NOT NULL,
-    StoreInfo VARCHAR(100) NOT NULL,
-    StoreCall VARCHAR(45) NOT NULL,
-    StorePrice int(11)  NOT NULL,
-	PRIMARY KEY(StoreNo)
+$sql =	"CREATE TABLE Reservation(
+	ResNo int(11) NOT NULL AUTO_INCREMENT,
+    ResTime VARCHAR(45) NOT NULL,
+    ResUserId VARCHAR(45) NOT NULL,
+    ResStoreName VARCHAR(45) NOT NULL,
+	PRIMARY KEY(ResNo),
+    FOREIGN KEY(ResUserId)
+    REFERENCES User(UserId) ON UPDATE CASCADE,
+    FOREIGN KEY(ResStoreName)
+    REFERENCES Store(StoreName) ON UPDATE CASCADE
 	)";
 
 if($conn->query($sql) === TRUE){
 	echo "<script>";
-	echo "alert('Table Store created successfully');";
+	echo "alert('Table Reservation created successfully');";
 	echo "location.href='../html/Create.html';";
 	echo "</script>";
 }else{

@@ -14,9 +14,16 @@ VALUES('1', 'COLOR AZIT', '충북 청주시 흥덕구 2순환로 1222', '1020', 
 
 
 if($conn->query($sql) === TRUE){
-   echo "New record created successfully";
+	echo "<script>";
+	echo "alert('successfully');";
+	echo "location.href='../html/Create.html';";
+	echo "</script>";
 }else{
-   echo "Error: " . $sql . "<br>" . $conn->error;
+	echo "<script>";
+	echo "alert('Error creating database');";
+	echo "location.href='../html/Create.html';";
+	echo "</script>";
+	//echo $conn->error;
 }
 
 $conn->close();
