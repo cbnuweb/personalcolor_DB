@@ -10,6 +10,43 @@ $pw = $_POST['signup_pw'];
 $name = $_POST['signup_name'];
 $phone = $_POST['signup_phone'];
 
+if(!$id){
+    echo "
+    <script>
+        alert('아이디를 입력해주세요.');
+        history.go(-1);
+    </script>
+    ";
+    exit;
+}
+if(!$pw){
+    echo "
+    <script>
+        alert('비밀번호를 입력해주세요.');
+        history.go(-1);
+    </script>
+    ";
+    exit;
+}
+if(!$name){
+    echo "
+    <script>
+        alert('이름을 입력해주세요.');
+        history.go(-1);
+    </script>
+    ";
+    exit;
+}
+if(!$phone){
+    echo "
+    <script>
+        alert('휴대폰 번호를 입력해주세요.');
+        history.go(-1);
+    </script>
+    ";
+    exit;
+}
+
 //중복 검사
 $test = "SELECT UserId FROM User WHERE UserId='{$id}'";
 $result = mysqli_query($conn,$test);

@@ -9,7 +9,7 @@ mysqli_select_db($conn, $dbname) or die('DB selection failed');
 $sql =	"CREATE TABLE User(
 	UserId VARCHAR(45) NOT NULL, 
 	UserPw VARCHAR(45) NOT NULL,
-	UserName VARCHAR(100) NOT NULL,
+	UserName VARCHAR(100) NOT NULL UNIQUE,
 	UserPhone VARCHAR(100) NOT NULL,
 	UserCheck boolean DEFAULT 0,
 	reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
