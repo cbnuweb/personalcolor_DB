@@ -6,19 +6,20 @@ $dbname = "personalcolor";
 mysqli_select_db($conn, $dbname) or die('DB selection failed');
 
 // Create table
-$sql =	"CREATE TABLE User(
-	UserId VARCHAR(45) NOT NULL, 
-	UserPw VARCHAR(45) NOT NULL,
-	UserName VARCHAR(45) NOT NULL UNIQUE,
-	UserPhone VARCHAR(45) NOT NULL,
-	UserCheck boolean DEFAULT 0,
-	reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	PRIMARY KEY(UserId)
+$sql =	"CREATE TABLE Store(
+	StoreNo VARCHAR(45) NOT NULL, 
+	StoreName VARCHAR(45) NOT NULL,
+	StoreAddress VARCHAR(45) NOT NULL UNIQUE,
+	StoreTime VARCHAR(45) NOT NULL,
+    StoreInfo VARCHAR(100) NOT NULL,
+    StoreCall VARCHAR(45) NOT NULL,
+    StorePrice int(11)  NOT NULL,
+	PRIMARY KEY(StoreNo)
 	)";
 
 if($conn->query($sql) === TRUE){
 	echo "<script>";
-	echo "alert('Table User created successfully');";
+	echo "alert('Table Store created successfully');";
 	echo "location.href='../html/Create.html';";
 	echo "</script>";
 }else{
