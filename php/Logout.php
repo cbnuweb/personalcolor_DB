@@ -17,7 +17,7 @@ if(mysqli_query($conn,$sql)){ // 로그인 성공
     
     echo "
     <script>
-        alert('로그아웃이 완료되었습니다.');
+        alert('Logout Sucessfully.');
         location.href='Home.php';
     </script>
     ";

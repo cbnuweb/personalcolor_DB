@@ -71,7 +71,7 @@ session_start();
               <h3>Please enter your sign up information</h3>
             </div>
             <div class="sign_up">
-                <form class="form-inline" action="Logout.php" method="POST" id="SignUp_Form">
+                <form class="form-inline" action="SignUpCheck.php" method="POST" id="SignUp_Form">
                     <div class="form-group">
                       <label for="id" class="col-sm-2">ID</label>
                       <div class="col-sm-10">
