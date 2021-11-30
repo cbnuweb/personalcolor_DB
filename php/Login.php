@@ -29,7 +29,7 @@ if(!$pw){
 }
 
 // 로그인 과정
-$test = "SELECT UserId FROM User WHERE UserId='{$id}' and UserPw='{$pw}'";
+$test = "SELECT * FROM User WHERE UserId='{$id}' and UserPw='{$pw}'";
 $result = mysqli_query($conn,$test);
 $exist = mysqli_num_rows($result);
 
@@ -50,6 +50,7 @@ if($exist==0){  // 존재하지 않을 때
         // 세션에 저장
         session_start();
         $_SESSION['userid']=$row['UserId'];
+        $_SESSION['userpw']=$row['UserPw'];
         $_SESSION['username']=$row['UserName'];
         $_SESSION['userphone']=$row['UserPhone'];
         $_SESSION['usercheck']=$row['UserCheck'];

@@ -1,12 +1,11 @@
 <?php header("Progma:no-cache"); header("Cache-Control: no-store, no-cache ,must-revalidate"); ?>
-<?php
 
+<?php
 session_start();
  ?>
 <!DOCTYPE html>
+
 <html lang="en">
-
-
 <?php
 $servername = "localhost:3306";
 $username = "root";
@@ -23,8 +22,6 @@ mysqli_select_db($connect, $dbname) or die('DB selection failed');
 
 $sql = "SELECT * FROM store WHERE StoreNo = '".$storeno."'";
 $result = $connect->query($sql);
-
-
 ?>
 
 <head>
@@ -151,33 +148,40 @@ return false;
           </div>
 
           <div class="show1">
+
           <hr id="res_hr">
           <div class="row">
+                  <form  action="reservationSave.php" method="post">
           <div class="col-sm-6" id="DateDiv">
-            <form>
+            <!--<form>-->
               <label class="nativeDatePicker">
                 <input type="date" name = "bday" id="selectDate">
                 <span class="validity"></span>
               </label>
-            </form>
+            <!--</form>-->
             <script src="Calendar.js"></script>
+
           </div>
+
           <div class="col-sm-6">
-            <form >
+            <!--<form >-->
               <select name = "res_time" size="1" id="res_time">
                 <?php
                 $a = $startTime;
                 $b = 1;
                 while($a < $endTime) { ?>
-                <option value="" id="res<?php echo $b ?>"> <?php echo $a ?> : 00 ~ <?php echo $a + 2 ?> : 00 </option>
+                <option> <?php echo $a ?> : 00 ~ <?php echo $a + 2 ?> : 00 </option>
                 <?php
                 $a = $a+2;
                 $b = $b+1; } ?>
               </select>
-            </form>
+            <!--</form>-->
           </div>
+
+          <input type="hidden" name = "storeName" value = <?php echo $storeno ?>></input>
+            <input class="res_btn" type="submit" name="button" value="Reservation" ></input>
+          </form>
         </div>
-          <button class="res_btn" type="button" name="button" >Revervation</button>
       </div>
 
       <!-- Reservation show2_ReviewScreen -->
@@ -246,4 +250,3 @@ return false;
 
   </body>
   </html>
-  <?php session_destroy()?>

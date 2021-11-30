@@ -81,7 +81,7 @@ session_start();
                 <div class="form-group">
                     <label for="name" class="col-sm-2">ID</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="name" placeholder="eunjeong99">
+                        <input type="text" class="form control" name="" id="id" placeholder="<?php echo $_SESSION['userid']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
@@ -90,7 +90,7 @@ session_start();
                 <div class="form-group">
                     <label for="password" class="col-sm-2">Password</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form control" name="" id="password" placeholder="1234">
+                        <input type="text" class="form control" name="" id="password" placeholder="<?php echo $_SESSION['userpw']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
@@ -99,33 +99,31 @@ session_start();
                 <div class="form-group">
                     <label for="name" class="col-sm-2">Name</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="name" placeholder="Cheon Eun Jeong">
+                        <input type="text" class="form control" name="" id="name" placeholder="<?php echo $_SESSION['username']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-2">Email</label>
+                    <label for="email" class="col-sm-2">Phone</label>
                     <div class="col-sm-8">
-                        <input type="email" class="form control" name="" id="email" placeholder="eunjeong1@naver.com">
+                        <input type="text" class="form control" name="" id="phone" placeholder="<?php echo $_SESSION['userphone']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="nickname" class="col-sm-2">NickName</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="nickname" placeholder="ezzan">
-                    </div>
-                    <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
-                    </div>
+                <div class="submit" style="width:100%;">
+                  <button type="button" id="logout_submit" class="btn">Logout</button>
                 </div>
-                <div class="submit">
-                    <input type="submit" value="Logout">
-                </div>
+                  <!-- 버튼 클릭 시 발생 이벤트 -->
+                  <script>
+                    const logout_submit = document.querySelector("#logout_submit");
+                    logout_submit.addEventListener("click",function(e){
+                      location.href='Logout.php'
+                    });
+                  </script>
               </form>
             </div>
           </div>

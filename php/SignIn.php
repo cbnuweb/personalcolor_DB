@@ -16,7 +16,6 @@ session_start();
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <link  rel="stylesheet" href="../css/Main.css" >
   <link  rel="stylesheet" href="../css/Sign.css" >
-  </script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:80px;">
