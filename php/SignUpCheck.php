@@ -59,21 +59,27 @@ if($exist==0){ // 중복이 아닐 때
     $result = mysqli_query($conn, $sql);
 
     if($result === false){
-        echo "<script>";
-        echo "alert('Sign Up Error. Please try again.');";
-        echo "location.href='../html/SignUp.html';";
-        echo "</script>";
+        echo "
+        <script>
+            alert('Sign Up Error. Please try again.');
+            history.go(-1);
+        </script>
+        ";
     }else{
-        echo "<script>";
-        echo "alert('Sign Up Successfully. Go to the SignIn page.');";
-        echo "location.href='../html/SignIn.html';";
-        echo "</script>";
+        echo "
+        <script>
+            alert('Sign Up Successfully. Go to the SignIn page.');
+            location.href='SignIn.php';
+        </script>
+        ";
     }
 }else{ // 중복일 때
-    echo "<script>";
-    echo "alert('It\'s a duplicate ID. Please try again.');";
-    echo "location.href='../html/SignUp.html';";
-    echo "</script>";
+    echo "
+    <script>
+        alert('Sign Up Error. Please try again.');
+        history.go(-1);
+    </script>
+    ";
 }
 
 $conn->close();

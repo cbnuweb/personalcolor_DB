@@ -4,6 +4,27 @@ session_start();
 ?>
 <html lang="en">
 
+<?php
+$servername = "localhost:3306";
+$username = "root";
+$password = "root";
+
+$connect = new mysqli($servername, $username, $password);
+if($connect -> connect_error){
+  die("Connection failed: " + $conn->connect_error);
+}
+
+$dbname = "personalcolor";
+mysqli_select_db($connect, $dbname) or die('DB selection failed');
+
+$sql = "SELECT * FROM user WHERE UserCheck = 1";
+$result = $connect->query($sql);
+while($resinfo = mysqli_fetch_array($result)){
+  $userID = $resinfo["UserId"];
+}
+$result = mysqli_query($connect, "SELECT * FROM reservation WHERE ResUserId = '".$userID."'");
+
+?>
 <head>
   <title>P-Color Reservation Page</title>
   <meta charset="utf-8">
@@ -81,7 +102,7 @@ session_start();
                 <div class="form-group">
                     <label for="name" class="col-sm-2">ID</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="name" placeholder="eunjeong99">
+                        <input type="text" class="form control" name="" id="id" placeholder="<?php echo $_SESSION['userid']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
@@ -90,7 +111,7 @@ session_start();
                 <div class="form-group">
                     <label for="password" class="col-sm-2">Password</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form control" name="" id="password" placeholder="1234">
+                        <input type="text" class="form control" name="" id="password" placeholder="<?php echo $_SESSION['userpw']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
@@ -99,57 +120,52 @@ session_start();
                 <div class="form-group">
                     <label for="name" class="col-sm-2">Name</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="name" placeholder="Cheon Eun Jeong">
+                        <input type="text" class="form control" name="" id="name" placeholder="<?php echo $_SESSION['username']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-2">Email</label>
+                    <label for="email" class="col-sm-2">Phone</label>
                     <div class="col-sm-8">
-                        <input type="email" class="form control" name="" id="email" placeholder="eunjeong1@naver.com">
+                        <input type="text" class="form control" name="" id="phone" placeholder="<?php echo $_SESSION['userphone']?>">
                     </div>
                     <div class="col-sm-2 change">
                       <input type="submit" value="Change">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="nickname" class="col-sm-2">NickName</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="nickname" placeholder="ezzan">
-                    </div>
-                    <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
-                    </div>
+                <div class="submit" style="width:100%;">
+                  <button type="button" id="logout_submit" class="btn">Logout</button>
                 </div>
-                <div class="submit">
-                    <input type="submit" value="Logout">
-                </div>
+                  <!-- 버튼 클릭 시 발생 이벤트 -->
+                  <script>
+                    const logout_submit = document.querySelector("#logout_submit");
+                    logout_submit.addEventListener("click",function(e){
+                      location.href='Logout.php'
+                    });
+                  </script>
               </form>
             </div>
           </div>
           <div class="col-md-6">
             <h3 class="section-subheading text-muted">Reservation Info</h3>
-            <div class="Reservation_Info">
-              <div class="Reservation_Date">2021.11.26</div>
-              <div class="Reservation_Time">13:00 ~ 15:00</div>
-            </div>
-            <div class="Reservation_Info row">
-              <div class="Reservation_Name col-sm-10">Jenaraum</div>
-              <div class="Reservation_Delete col-sm-2"><input type="submit" value="Delete"></div>
-            </div>
-            <hr id="res_hr">
+            <?php while($resinfo = mysqli_fetch_array($result)){ ?>
+            <form action="deleteReservation.php" method="post">
 
-            <div class="Reservation_Info">
-              <div class="Reservation_Date">2021.12.01</div>
-              <div class="Reservation_Time">13:00 ~ 15:00</div>
+            <div class="Reservation_Info" id="resInfo<?php echo $resinfo["ResNo"]?>">
+              <div class="Reservation_Date"><?php echo $resinfo["ResDate"] ?></div>
+              <div class="Reservation_Time"><?php echo $resinfo["ResTime"] ?></div>
             </div>
+            <input type="hidden" name="xxxx" id="xxxx" />
+            <input type="hidden" name="resno" value="<?php echo $resinfo["ResNo"]?>"></input>
             <div class="Reservation_Info row">
-              <div class="Reservation_Name col-sm-10">Charming On</div>
+              <div class="Reservation_Name col-sm-10"><?php echo $resinfo["ResStoreName"] ?></div>
               <div class="Reservation_Delete col-sm-2"><input type="submit" value="Delete"></div>
             </div>
             <hr id="res_hr">
+        </form>
+          <?php } ?>
           </div>
         </div>
       </section>

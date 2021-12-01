@@ -50,8 +50,8 @@ $resNo = !empty($row["ResNo"])?$row["ResNo"] + 1:1;
 */
 //예약 시간 가져오기
 
-$sql = "INSERT INTO reservation(ResNo, ResTime, ResUserId, ResStoreName)
-         VALUES('$resNo','$resTime','$userID','$storeName')";
+$sql = "INSERT INTO reservation(ResNo, ResTime, ResUserId, ResStoreName, ResDate)
+         VALUES('$resNo','$resTime','$userID','$storeName', '$resDate')";
 
  $result = mysqli_query($connect, $sql);
 
