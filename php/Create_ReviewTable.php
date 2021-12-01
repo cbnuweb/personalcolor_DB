@@ -9,14 +9,13 @@ mysqli_select_db($conn, $dbname) or die('DB selection failed');
 $sql =   "CREATE TABLE Review(
     ReviewId int(11) NOT NULL AUTO_INCREMENT, 
     NickName VARCHAR(45),
-    User_Name VARCHAR(200) NOT NULL,
     Store_No VARCHAR(45) NOT NULL,
     UserRating int(1) NOT NULL,
     UserReview text NOT NULL,
     datetime int(11) NOT NULL DEFAULT 0,
     PRIMARY KEY(ReviewId),
-    -- FOREIGN KEY(User_Name)
-    -- REFERENCES User(UserName) ON UPDATE CASCADE,
+    FOREIGN KEY(NickName)
+    REFERENCES User(UserName) ON UPDATE CASCADE,
     FOREIGN KEY(Store_No)
     REFERENCES Store(StoreNo) ON UPDATE CASCADE
    )";
