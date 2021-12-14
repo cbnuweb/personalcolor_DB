@@ -14,6 +14,7 @@ $sql =	"CREATE TABLE Store(
     StoreInfo VARCHAR(100) NOT NULL,
     StoreCall VARCHAR(45) NOT NULL,
     StorePrice int(11)  NOT NULL,
+	StoreImg VARCHAR(45) NOT NULL,
 	PRIMARY KEY(StoreNo)
 	)";
 

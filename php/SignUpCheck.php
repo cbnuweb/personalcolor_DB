@@ -13,7 +13,7 @@ $phone = $_POST['signup_phone'];
 if(!$id){
     echo "
     <script>
-        alert('아이디를 입력해주세요.');
+        alert('Please enter your ID.');
         history.go(-1);
     </script>
     ";
@@ -22,7 +22,7 @@ if(!$id){
 if(!$pw){
     echo "
     <script>
-        alert('비밀번호를 입력해주세요.');
+        alert('Please enter your Password.');
         history.go(-1);
     </script>
     ";
@@ -31,7 +31,7 @@ if(!$pw){
 if(!$name){
     echo "
     <script>
-        alert('이름을 입력해주세요.');
+        alert('Please enter your Name.');
         history.go(-1);
     </script>
     ";
@@ -40,7 +40,7 @@ if(!$name){
 if(!$phone){
     echo "
     <script>
-        alert('휴대폰 번호를 입력해주세요.');
+        alert('Please enter your Phone.');
         history.go(-1);
     </script>
     ";

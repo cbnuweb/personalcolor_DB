@@ -1,6 +1,7 @@
 <?php
 session_start();
- ?>
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -43,12 +44,12 @@ $result = $connect->query($sql);
 
   <!-- 다시 스토어 정보 창으로 넘어가기  -->
   <script>
-  $(document).ready(function(){
-  $('.home').on('click', function(){
-    location.href='Reservation.php';
-  });
-});
-</script>
+   $(document).ready(function(){
+      $('.home').on('click', function(){
+         location.href='Reservation.php?storeno='+<?php echo $_SESSION['storeno']?>;
+      });
+   });
+   </script>
 </head>
 
 <!-- <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:80px;"> -->
@@ -171,7 +172,7 @@ $result = $connect->query($sql);
 </div>
 
   <!--footer-->
-  <footer class="container-fluid text-center" id="footer">
+  <footer class="container-fluid text-center" id="footer" style="margin-top:50px;">
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
@@ -536,7 +537,7 @@ $(document).ready(function(){
       var UserReview = $('#UserReview').val();
       if( UserReview == '')
       {
-         alert("빈 입력창을 채워주세요");
+         alert("Please fill in the input window.");
          return false;
       }
       else

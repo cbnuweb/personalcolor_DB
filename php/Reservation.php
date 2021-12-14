@@ -100,12 +100,11 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-md-6" id="cam">
             <div>
-              <img src="../img/store1.jpg" alt="cam" class="ReservationSection_image img-resonsive">
+              <img id="storeimg" src="../img/store1.jpg" alt="storeimg" class="ReservationSection_image img-resonsive">
             </div>
           </div>
           <div class="col-md-6" id="Info">
             <section class="" id="section1">
-              <button class="home" type="button" name="button" >Home</button>
               <button class="review" type="button" name="button" >Review</button>
             </section>
             <!-- Reservation show1_InfoScreen -->
@@ -124,6 +123,7 @@ $(document).ready(function(){
                 <p class="storeInfo2"><?php echo $storeinfo["StorePrice"] ?></p>
                 <p class="storeInfo2"><?php echo $storeinfo["StoreCall"] ?></p>
                 <p class="storeInfo2"><?php echo $storeinfo["StoreAddress"] ?></p>
+                <script> $("#storeimg").attr("src","../img/<?php echo $storeinfo["StoreImg"]?>.jpg"); </script>
                 <?php
                 $startTime = round($storeinfo["StoreTime"]/100,0);
                 $endTime = $storeinfo["StoreTime"] % 100; ?>
@@ -132,7 +132,6 @@ $(document).ready(function(){
                 <?php } ?>
               </div>
           </div>
-
           <div class="show1">
 
           <hr id="res_hr">

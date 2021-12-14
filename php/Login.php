@@ -12,7 +12,7 @@ $pw = $_POST['signin_pw'];
 if(!$id){
     echo "
     <script>
-        alert('아이디를 입력해주세요.');
+        alert('Please enter your ID.');
         history.go(-1);
     </script>
     ";
@@ -21,7 +21,7 @@ if(!$id){
 if(!$pw){
     echo "
     <script>
-        alert('비밀번호를 입력해주세요.');
+        alert('Please enter your PassWord.');
         history.go(-1);
     </script>
     ";
@@ -36,7 +36,7 @@ $exist = mysqli_num_rows($result);
 if($exist==0){  // 존재하지 않을 때
     echo "
     <script>
-        alert('존재하지 않는 정보입니다. 아이디와 비밀번호를 확인해주세요.');
+        alert('This information does not exist. Please check your ID and password.');
         history.go(-1);
     </script>
     ";
@@ -57,14 +57,14 @@ if($exist==0){  // 존재하지 않을 때
 
         echo "
         <script>
-            alert('로그인에 성공했습니다.');
+            alert('SignIn successful.');
             location.href='Home.php';
         </script>
         ";
     }else{ // 로그인 실패
         echo "
         <script>
-            alert('로그인에 실패했습니다.');
+            alert('Try again.');
             history.go(-1);
         </script>
         ";

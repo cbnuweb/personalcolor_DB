@@ -1,5 +1,5 @@
 function warnEmpty(){ //댓글내용이 없을 경우 경고창 출
-  alert("내용을 입력하세요");
+  alert("Enter the content.");
 }
 function dateToString(date){ //subit클릭한 시간을 인자로 받아 출
   const dateString = date.toISOString();

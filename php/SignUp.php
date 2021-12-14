@@ -123,7 +123,7 @@ session_start();
       if(signup_pw.value&&signup_pw.value === signup_pw_check.value){
           signup_form.submit();
       }else{
-        alert("비밀번호가 서로 일치하지 않습니다.");
+        alert("The passwords do not match each other.");
         return false;
       }
     });

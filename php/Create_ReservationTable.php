@@ -11,6 +11,7 @@ $sql =	"CREATE TABLE Reservation(
     ResTime VARCHAR(45) NOT NULL,
     ResUserId VARCHAR(45) NOT NULL,
     ResStoreName VARCHAR(45) NOT NULL,
+	ResDate VARCHAR(45) NOT NULL,
 	PRIMARY KEY(ResNo),
     FOREIGN KEY(ResUserId)
     REFERENCES User(UserId) ON UPDATE CASCADE,

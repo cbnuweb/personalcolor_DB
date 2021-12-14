@@ -95,57 +95,67 @@ $result = mysqli_query($connect, "SELECT * FROM reservation WHERE ResUserId = '"
           <div class="col-md-6">
             <h3 class="section-subheading text-muted">Profile</h3>
             <div class="Mypage_image">
-              <img src="../img/profile.jpg" alt="profile" class="img-resonsive">
+              <img src="../img/profile.png" alt="profile" class="img-resonsive">
+            </div>
+            <div>
+                <h4><?php echo $_SESSION['userid']?></h4>
+                <br>
             </div>
             <div class="Mypage_Info">
               <form class="form-inline">
-                <div class="form-group">
-                    <label for="name" class="col-sm-2">ID</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="id" placeholder="<?php echo $_SESSION['userid']?>">
-                    </div>
-                    <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-sm-2">Password</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="password" placeholder="<?php echo $_SESSION['userpw']?>">
-                    </div>
-                    <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
-                    </div>
-                </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom:20px;">
                     <label for="name" class="col-sm-2">Name</label>
                     <div class="col-sm-8">
                         <input type="text" class="form control" name="" id="name" placeholder="<?php echo $_SESSION['username']?>">
                     </div>
+                </div>
+              </form>
+              <form action="ChangePw.php" method="POST" id="Pw_Form" class="form-inline">
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="password" class="col-sm-2">Password</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form control" name="password" id="password" placeholder="<?php echo $_SESSION['userpw']?>">
+                    </div>
                     <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
+                      <button type="button" value="Change" id="pw_change">
                     </div>
                 </div>
+              </form>
+              <form action="ChangePhone.php" method="POST" id="Phone_Form" class="form-inline">
                 <div class="form-group">
                     <label for="email" class="col-sm-2">Phone</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form control" name="" id="phone" placeholder="<?php echo $_SESSION['userphone']?>">
+                        <input type="text" class="form control" name="phone" id="phone" placeholder="<?php echo $_SESSION['userphone']?>">
                     </div>
                     <div class="col-sm-2 change">
-                      <input type="submit" value="Change">
+                      <button type="button" value="Change" id="phone_change">
                     </div>
                 </div>
-                <div class="submit" style="width:100%;">
-                  <button type="button" id="logout_submit" class="btn">Logout</button>
-                </div>
-                  <!-- 버튼 클릭 시 발생 이벤트 -->
-                  <script>
-                    const logout_submit = document.querySelector("#logout_submit");
-                    logout_submit.addEventListener("click",function(e){
-                      location.href='Logout.php'
-                    });
-                  </script>
               </form>
+              <div class="submit" style="width:100%;">
+                <button type="button" id="logout_submit" class="btn" style="margin-top:30px;">Logout</button>
+              </div>
+                <!-- 버튼 클릭 시 발생 이벤트 -->
+                <script>
+                  const pw_form = document.querySelector("#Pw_Form");
+                  const phone_form = document.querySelector("#Phone_Form");
+                  
+                  const logout_submit = document.querySelector("#logout_submit");
+                  const pw_change = document.querySelector("#pw_change");                    
+                  const phone_change = document.querySelector("#phone_change");
+                  
+                  logout_submit.addEventListener("click",function(e){
+                    location.href='Logout.php'
+                  });
+
+                  pw_change.addEventListener("click",function(e){
+                    pw_form.submit();
+                  });
+
+                  phone_change.addEventListener("click",function(e){
+                    phone_form.submit();
+                  });
+                </script>
             </div>
           </div>
           <div class="col-md-6">

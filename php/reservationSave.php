@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost:3306";
 $username = "root";
 $password = "root";
@@ -52,8 +51,7 @@ $resNo = !empty($row["ResNo"])?$row["ResNo"] + 1:1;
 
 $sql = "INSERT INTO reservation(ResNo, ResTime, ResUserId, ResStoreName, ResDate)
          VALUES('$resNo','$resTime','$userID','$storeName', '$resDate')";
+  $result = mysqli_query($connect, $sql);
 
- $result = mysqli_query($connect, $sql);
-
-print "<script language=javascript> alert('예약 되었습니다.'); location.replace('Store.php'); </script>";
+  print "<script language=javascript> alert('예약 되었습니다.'); location.replace('Mypage.php'); </script>";
  ?>
