@@ -55,7 +55,6 @@ $exist = mysqli_num_rows($result);
 if($exist==0){ // 중복이 아닐 때
     $sql = "INSERT INTO User(UserId, UserPw, UserName, UserPhone)
             VALUES('$id','$pw','$name','$phone')";
-    echo $sql;
     $result = mysqli_query($conn, $sql);
 
     if($result === false){

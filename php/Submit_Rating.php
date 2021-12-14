@@ -23,7 +23,7 @@ if(isset($_POST["rating_data"])) //DB에 보내기
    $statement = $connect->prepare($query);
    $statement->execute($data);
 
-   echo "별점과 리뷰가 성공적으로 등록되었습니다^^";
+   echo "Review and Start Rating Save Successful";
 }
 
 if(isset($_POST["action"]))

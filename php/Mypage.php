@@ -117,7 +117,7 @@ $result = mysqli_query($connect, "SELECT * FROM reservation WHERE ResUserId = '"
                         <input type="text" class="form control" name="password" id="password" placeholder="<?php echo $_SESSION['userpw']?>">
                     </div>
                     <div class="col-sm-2 change">
-                      <button type="button" value="Change" id="pw_change">
+                      <button type="button" value="Change" id="pw_change">Change</button>
                     </div>
                 </div>
               </form>
@@ -128,7 +128,7 @@ $result = mysqli_query($connect, "SELECT * FROM reservation WHERE ResUserId = '"
                         <input type="text" class="form control" name="phone" id="phone" placeholder="<?php echo $_SESSION['userphone']?>">
                     </div>
                     <div class="col-sm-2 change">
-                      <button type="button" value="Change" id="phone_change">
+                      <button type="button" value="Change" id="phone_change">Change</button>
                     </div>
                 </div>
               </form>

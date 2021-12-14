@@ -53,5 +53,5 @@ $sql = "INSERT INTO reservation(ResNo, ResTime, ResUserId, ResStoreName, ResDate
          VALUES('$resNo','$resTime','$userID','$storeName', '$resDate')";
   $result = mysqli_query($connect, $sql);
 
-  print "<script language=javascript> alert('예약 되었습니다.'); location.replace('Mypage.php'); </script>";
+  print "<script language=javascript> alert('Reservation Successful'); location.replace('Mypage.php'); </script>";
  ?>

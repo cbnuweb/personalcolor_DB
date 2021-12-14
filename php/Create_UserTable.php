@@ -23,7 +23,7 @@ if($conn->query($sql) === TRUE){
 	echo "</script>";
 }else{
 	echo "<script>";
-	echo "alert('Error creating database');";
+	echo "alert('Error creating table');";
 	echo "location.href='../html/Create.html';";
 	echo "</script>";
 	//echo $conn->error;

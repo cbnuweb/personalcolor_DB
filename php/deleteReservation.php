@@ -14,7 +14,7 @@ $resNo = $_POST['resno'];
 
      $sql = "DELETE FROM reservation WHERE ResNo = '".$resNo."'";
      $result = $connect->query($sql);
-     print "<script language=javascript> alert('취소 되었습니다.'); location.replace('Mypage.php'); </script>";
+     print "<script language=javascript> alert('Cancel Successful'); location.replace('Mypage.php'); </script>";
 
 
 ?>
